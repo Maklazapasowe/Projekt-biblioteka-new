@@ -80,6 +80,7 @@ export default function Chat() {
                         dialogs.filter((value) => value.path == dialogPath)
                             .filter(value => arrayIncludesAll(inventory, value.ifHas))
                             .filter(value => arrayNotIncludesAll(inventory, value.ifNotHas))
+                            .sort((a, b) => b.priority - a.priority)
                             .map((value, index) =>
                                 <ChatInput key={index} {...value} sendMessage={sendMessage} />
                             )}

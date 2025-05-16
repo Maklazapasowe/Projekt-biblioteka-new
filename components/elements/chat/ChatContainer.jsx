@@ -19,6 +19,7 @@ export default function ChatContainer(){
         >
             <div className="w-3/4 h-3/4 bg-blue-500 rounded-full animate-ping absolute" />
             <Image src={chatIcon} alt="" className="w-1/2 h-1/2 invert" />
+            <div className="w-[30%] h-[30%] bg-red-500 rounded-full absolute right-0 top-0"></div>
         </div>
 
         <div onClick={()=>setIsShown(false)} className={`w-full h-[100vh] backdrop-blur-sm fixed right-0 top-0 ${!isShown ? "translate-x-full" : "translate-x-0"}`}></div>
